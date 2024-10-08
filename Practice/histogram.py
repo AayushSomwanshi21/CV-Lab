@@ -21,6 +21,12 @@ plt.subplot(223)
 plt.title('Histogram 1')
 plt.hist(img1.ravel(), 256, [0, 256])
 
+final_img = cv2.equalizeHist(img1)
+
+plt.subplot(224)
+plt.title('Equalized Image')
+plt.imshow(final_img)
+
 plt.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
